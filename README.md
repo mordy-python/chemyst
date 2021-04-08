@@ -1,7 +1,5 @@
 # The Chemyst library
 
-Note: As of now this library is in development
-
 To install chemyst run ```pip install chemyst```  
 
 ## Usage For P_total
