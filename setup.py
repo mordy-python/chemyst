@@ -5,7 +5,7 @@ with open('README.md') as readme_file:
 
 setup_args = dict(
     name='chemyst',
-    version='2.1.1',
+    version='2.2.0',
     description='Useful functions to work with basic chemistry and stochiemetry',
     long_description_content_type="text/markdown",
     long_description=README,
