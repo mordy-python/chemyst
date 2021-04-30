@@ -3,3 +3,4 @@ dist
 chemyst.egg-info
 chem 
 .vscode
+chemyst/__pycache__
