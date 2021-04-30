@@ -6,6 +6,8 @@ def P_total(pressures=[]):
     for pressure in pressures:
         total += pressure
     return float(total)
+
+
 def partial_pressure(num_moles, ideal_gas_law, temp, volume, is_temp_kelvin=True):
     '''Returns the partial pressure of a given gas in a mixture\n
     num_moles:\n\tNumber of moles of the gas in the reaction\n

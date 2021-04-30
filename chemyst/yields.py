@@ -4,7 +4,8 @@ def theoretical_yield(actual_yield, mole_ratio_top, mole_ratio_bottom):
     mole_ratio_top:\n\tFrom the balanced equation given, the number of moles of the wanted element\n
     mole_ratio_bottom:\n\tFrom the balanced equation given, the number of moles of the given element'''
     yielded = actual_yield * (mole_ratio_top / mole_ratio_bottom)
-    return yielded 
+    return yielded
+
 
 def percent_yield(actual_yield, theoretical_yield):
     '''Finds theoretical_yield\n
