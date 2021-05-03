@@ -5,8 +5,8 @@ To install chemyst run ```pip install chemyst```
 ## Usage For P_total
 
 ```python
-# PVnRT stands for Pressure, Volume, Number of Moles, R is the ideal gas law constant, T is temperature
-from chemyst.PVnRT import P_total
+# gas_laws stands for Pressure, Volume, Number of Moles, R is the ideal gas law constant, T is temperature
+from chemyst.gas_laws import P_total
 # Mixture of 3 gases lets say
 total_pressure = P_total([9.987, 2.33, 123.9])
 print(total_pressure)
@@ -21,7 +21,7 @@ Args:
 ## Usage For partial_pressure
 
 ```python
-from chemyst.PVnRT import partial_pressure
+from chemyst.gas_laws import partial_pressure
 # Args: num_moles, ideal_gas_law, temp, volume, is_temp_kelvin=True
 pressureO2 = partial_pressure(2, 'atm', 31, 15.0, False)
 print(pressureO2)
@@ -43,10 +43,10 @@ Args:
 - is_temp_kelvin determines whether the temperature should be converter to Kelvin or not
   - if the temperature is in celsius is_temp_kelvin should equal false
 
-## Usage For the moles_mass module
+## Usage For the conversions module
 
 ```python
-from chemyst.moles_mass import moles_to_mass, mass_to_moles, atoms_to_grams, grams_to_atoms
+from chemyst.conversions import moles_to_mass, mass_to_moles, atoms_to_grams, grams_to_atoms, ml_to_l, l_to_ml
 # Moles to mass OUTPUT: 512g
 moles_to_mass(16, 32)
 # Mass to moles OUTPUT: 16.0
@@ -55,6 +55,10 @@ mass_to_moles(512, 32)
 atoms_to_grams(1352, 32)
 # Grams to atoms OUTPUT: 1.88e24 
 grams_to_atoms(100, 32)
+# Mililiters to liters OUTPUT: 1 liter
+ml_to_l(1000)
+# Liters to mililiters OUTPUT: 1000ml
+l_to_ml(1)
 ```
 
 Args:
@@ -72,6 +76,24 @@ Args:
 - grams_to_atoms(g_of_element, molar_mass)
   - g_of_element is the amount of grams which will be converted to moles
   - molar_mass is the mass of the element in grams
+- ml_to_l(ml)
+  - ml is the number of mililiters to convert into liters
+- l_to_ml(l)
+  - l is the number of liters to convert into mililiters
+
+## Usage for the molar module
+
+### Molar and finding the moles
+
+The molar module gives the Molar amount (M) from the moles and volume of a solution
+
+```python
+from chemyst.molar import molar, find_moles
+# Find the Molar amount of 3 moles of sugar in 5 liters of water
+molar(3, 5) # OUTPUT: 0.6M
+# Find the number of moles of sugar with the Volume and Moles of the same siolution
+find_moles(0.6, 5) # OUTPUT: 3 Moles Sugar
+```
 
 ## Usage For the yields module
 
@@ -89,7 +111,7 @@ the theoretical_yield() function takes 3 arguments:
   - From the balanced equation given, the number of moles of the given element
 
 IMPORTANT: the theoretical_yield() function arguments MUST all be moles  
-this can be easily achieved by using the ```moles_to_mass``` and ```mass_to_moles``` functions of ```chemyst.moles_mass```
+this can be easily achieved by using the ```moles_to_mass``` and ```mass_to_moles``` functions of ```chemyst.conversions```
 
 ### Percent Yield
 
@@ -101,4 +123,4 @@ the percent yield() function take 2 arguments
   - this yield can be calculated using the theoretical_yield() function
 
 IMPORTANT: the percent_yield() function arguments MUST all be grams  
-this can be easily achieved by using the ```moles_to_mass``` and ```mass_to_moles``` functions of ```chemyst.moles_mass```
+this can be easily achieved by using the ```moles_to_mass``` and ```mass_to_moles``` functions of ```chemyst.conversions```
