@@ -30,7 +30,7 @@ def f_to_c(f):  # Convert fahrenheit to celsius
     return (f - 32) * 5 / 9
 
 
-def f_to_k(f):  # Convert fahrenheit to celsius
+def f_to_k(f):  # Convert fahrenheit to kelvin
     return (f - 32) * 5 / 9 + 273.15
 
 
