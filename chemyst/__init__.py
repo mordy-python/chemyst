@@ -3,9 +3,4 @@ from . import conversions
 from . import yields
 from . import molar
 
-__all__ = [
-    'gas_laws',
-    'conversions',
-    'yields',
-    'molar'
-]
+__all__ = ["gas_laws", "conversions", "yields", "molar"]

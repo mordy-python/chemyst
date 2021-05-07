@@ -32,7 +32,7 @@ def milligrams_to_grams(milligram):  # Convert milligrams to grams
 
 
 def milligrams_to_kilograms(milligram):  # Convert milligrams to kilograms
-    return milligram / 1e+6
+    return milligram / 1e6
 
 
 def kilograms_to_grams(kilogram):  # Convert kilograms to grams
@@ -40,7 +40,7 @@ def kilograms_to_grams(kilogram):  # Convert kilograms to grams
 
 
 def kilograms_to_milligrams(kilogram):  # Convert kilograms to milligrams
-    return kilogram * 1e+6
+    return kilogram * 1e6
 
 
 def pounds_to_tons(p):  # Convert pounds to tons
