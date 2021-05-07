@@ -10,12 +10,12 @@ def mass_to_moles(g_of_element, molar_mass):  # Convert mass of an element to mo
 
 
 def atoms_to_grams(num_atoms, molar_mass):  # Convert atoms to grams
-    grams = (num_atoms / (6.02 * 10 ** 23)) * molar_mass
+    grams = (num_atoms / (6.02e23)) * molar_mass
     return grams
 
 
 def grams_to_atoms(g_of_element, molar_mass):  # Convert element grams to atoms
-    atoms = (g_of_element / molar_mass) * (6.02 * 10 ** 23)
+    atoms = (g_of_element / molar_mass) * (6.02e23)
     return atoms
 
 
