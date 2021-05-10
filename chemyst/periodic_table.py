@@ -82,3 +82,34 @@ def period_number(z:int) -> int :
             ultimate_shell = int(i[0])
 
     return ultimate_shell
+
+# def group_number(z:int) -> int:
+#     """
+#     Returns the group number of an element corresponding to the Modern Periodic Table.
+#     """
+#     _check_atomic_number(z)
+
+#     config = electronic_config(z).split(" ")
+
+#     last_subshell_no = config[-1][0]
+#     last_subshell = config[-1][1]
+#     valence_electrons = 0
+
+#     for i in config:
+#         if last_subshell_no == i[0]:
+#             valence_electrons += int(i[2:])
+
+#     if last_subshell == "S":
+#         return valence_electrons
+
+#     elif last_subshell == "P":
+#         return valence_electrons + 10
+
+#     elif last_subshell == "D":
+#         return "D block" 
+
+#     elif last_subshell == "F":
+#         return 3
+
+#     else:
+#         print("Invalid subshell")
